@@ -1,0 +1,35 @@
+var quizList = [
+    { q: "Name all time highest grossing game.",
+        choice: ["Halo", "Mario", "World of Warcrafts", "Grand Theft Auto"],
+        a: 2 }, // 1
+    { q: "Where was the first PS3 released?",
+        choice: ["USA", "Japan", "Europe", "All of them"],
+        a: 1 },
+    { q: "In which PS4 game, your phone is the controller?",
+        choice: ["Hidden Agenda", "Team Sonic Racing", "Dauntless", "EarthNight"],
+        a: 0 },
+    { q: "Which virus was decoded after playing Foldit?",
+        choice: ["Ebola", "AIDS", "SARS", "E. coli"],
+        a: 1 },
+    { q: "What's the color of the wings of Dragon in Spyro?",
+        choice: ["Blue", "Gray", "Green", "Orange"],
+        a: 3 },  // 5
+    { q: "How many games were first released at the launch of PS3?",
+        choice: [ "10", "12", "18", "25"],
+        a: 1 },
+    { q: "How many games were first released at the launch of PS4?",
+        choice: [ "10", "12", "18", "25"],
+        a: 2 },
+    { q: "Which field of study is the basis of the Tomb Raider?",
+        choice: [ "Chemistry", "Geology", "Astrology", "Archaeology"],
+        a: 3 },
+    { q: "In how many languages The Nintendo DS Lite available?",
+        choice: [ "3", "4", "6", "8"],
+        a: 2 },
+    { q: "What is the color of Packman in Pacman256?",
+        choice: [ "Orange", "Brown", "Green", "Yellow"],
+        a: 3 },  // 10
+    { q: 'Most of us have played Atari Games. What does "Atari" mean?',
+        choice: [ "Success", "Inspiration", "Imagination", "Challenge"],
+        a: 0 }
+];

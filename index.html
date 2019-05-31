@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trivia Game</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Homemade css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    
+    <div id="box-body">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Trivia Game</h1>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="text-status">Modal title</h5>
+                </div>
+                <div class="modal-body" id="text-detail">
+                ...
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class=container>
+            <div class="row">
+                <div class="col">
+                    <h2>Time Remaining: <span id="text-timer">0</span> Seconds</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 id="text-question">question</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="optradio" id="id-ans1" value="option1">
+                        <label class="form-check-label" for="id-ans1">
+                            option 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="optradio" id="id-ans2" value="option2">
+                        <label class="form-check-label" for="id-ans2">
+                            option 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="optradio" id="id-ans3" value="option3">
+                        <label class="form-check-label" for="id-ans3">
+                            option 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="optradio" id="id-ans4" value="option4">
+                        <label class="form-check-label" for="id-ans4">
+                            option 4
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary" id="btn-choose">Choose</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/data.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>

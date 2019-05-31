@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 0px;
+    font-weight: bold;
+}
+
+body {
+    background: url("../images/background.png");
+}
+
+#box-body {
+    width: 75%;
+    margin: auto;
+}
+
+#text-status {
+    margin: auto;
+}
