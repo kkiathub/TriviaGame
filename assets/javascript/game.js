@@ -4,7 +4,7 @@ var timer;
 var timeHandle;
 
 var trivia = {
-    numQuiz: 3,
+    numQuiz: 10,
     numRights: 0,
     numWrongs: 0,
     currQuiz: 0,
