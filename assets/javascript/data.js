@@ -31,5 +31,17 @@ var quizList = [
         a: 3 },  // 10
     { q: 'Most of us have played Atari Games. What does "Atari" mean?',
         choice: [ "Success", "Inspiration", "Imagination", "Challenge"],
-        a: 0 }
+        a: 0 },
+    { q: "Name the character abused by Mario.",
+        choice: ["Koopa", "Bowser", "Luigi", "Donkey Kong"],
+        a: 3 },
+    { q: "In which year Angry Birds Star Wars II released?",
+        choice: ["2012", "2013", "2014", "2015"],
+        a: 1 },
+    { q: "What is the name of the main protagonist of the (God of War) series for PlayStation 3 and 3?",
+        choice: ["Kronos", "Caesarion", "Kratos", "Hercules"],
+        a: 2 },
+    { q: "Which planet size is approximatly same as the Minecraft?",
+        choice: ["Urenus", "Mar", "Neptune", "Pluto"],
+        a: 2 }
 ];
