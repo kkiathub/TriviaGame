@@ -5,11 +5,19 @@
 
 .jumbotron {
     padding: 0px;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
+h1 {
+    color: mediumseagreen;
+    text-shadow: 3px 2px black;
+}
 body {
     background: url("../images/background.png");
+}
+.jumbotron, #box-body {
+    background-color: rgb(236, 200, 89);
+    border-radius: 12px;
 }
 
 #box-body {
@@ -17,6 +25,37 @@ body {
     margin: auto;
 }
 
+
 #text-status {
+    font-weight: bold;
+    margin: 20px auto;
+    font-size: 30px;
+}
+#text-detail {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.form-check {
+    font-size: 24px;
+    padding: 10px 0px;
+}
+
+.form-check-input {
+    margin-top: 13px;
+}
+
+#btn-choose {
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+
+#btn-restart {
     margin: auto;
+    margin-bottom: 15px;
+}
+
+.modal-content {
+    background-color: burlywood;
+    border-radius: 12px;
 }

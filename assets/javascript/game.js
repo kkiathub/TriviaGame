@@ -4,7 +4,7 @@ var timer;
 var timeHandle;
 
 var trivia = {
-    numQuiz: 10,
+    numQuiz: 3,
     numRights: 0,
     numWrongs: 0,
     currQuiz: 0,
@@ -54,33 +54,55 @@ function decrement() {
     $("#text-timer").text(timer);
 
     if (timer === 0) {
-       
        var quiz = quizList[trivia.selectedQuiz[trivia.currQuiz]];
        showResult("Time's UP!","Correct Answer: " + quiz.choice[quiz.a] )
+       trivia.numWrongs++;
     }
 }
 
 function nextQuiz() {
     trivia.currQuiz++;
-    console.log("next q : " + trivia.currQuiz);
     if (trivia.currQuiz < trivia.selectedQuiz.length) {
         displayQuiz();
-    } else {
-        // game summary page
+        return true;
     }
+    // game summary page
+    gameCompleted();
+    return false;
+}
+
+function gameCompleted() {
+    clearInterval(timeHandle);
+    $("#text-status").text("Game Completed!");
+    result = "<p>Number of correct answers: " + trivia.numRights + "</p>";
+    result += "<p>Number of wrong answers: " + trivia.numWrongs + "</p>";
+    $("#text-detail").html(result);
+    $("#btn-restart").show();
+    $('#myModal').modal({backdrop: "static", keyboard: false});
+
 }
 
 function showResult(line1, line2) {
     clearInterval(timeHandle);
     $("#text-status").text(line1);
     $("#text-detail").text(line2);
+    $("#btn-restart").hide();
     $('#myModal').modal({backdrop: "static", keyboard: false});
 
     setTimeout(function() {
-        $("#myModal").modal("hide");
-        nextQuiz();
+        if (nextQuiz()) {
+            $("#myModal").modal("hide");
+        }
     }, 3000);
 }
+
+// button click functions
+$("#btn-restart").on("click", function() {
+    $("#btn-restart").hide();
+    $("#myModal").modal("hide");
+    trivia.reset();
+    displayQuiz()
+})
 
 $(".form-check-input").on("click", function() {
     $("#btn-choose").attr("disabled", false);
@@ -90,8 +112,10 @@ $("#btn-choose").on("click", function() {
     var quiz = quizList[trivia.selectedQuiz[trivia.currQuiz]];
 
     if ($("#id-ans" + (quiz.a+1)).prop("checked")) {
+        trivia.numRights++;
         showResult("Congratulation!","You chose the correct answer!");
     } else {
+        trivia.numWrongs++;
         showResult("Wrong answer!","Correct Answer: " + quiz.choice[quiz.a] );
     }
 })
