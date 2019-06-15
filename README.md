@@ -15,3 +15,7 @@ This Trivia game is all about VDO games.
     - JQuery is used to update elements.  
     - All logic are done in JavaScript.
     - Object programming is used to define game data.
+
+### Potential Update
+    - Add difficulty mode.   Allow more time in an easy more, less time on hard mode.
+    - Add header , footer.

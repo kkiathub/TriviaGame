@@ -1,5 +1,5 @@
 // declare global variables
-const TIME_LIMIT = 7; 
+const TIME_LIMIT = 12;
 var timer;
 var timeHandle;
 
